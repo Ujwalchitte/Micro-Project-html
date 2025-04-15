@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Level eBook Store</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<header>
+    <h1>eBook Store</h1>
+    <nav>
+        <ul>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+    
+    <section id="books">
+        <h2>Available Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL.jpg" alt="Book 1" >
+                <h3>IKIGAI</h3>
+                <p>Author: Héctor García and Francesc Miralles.</p>
+                <p class="description">This is a great book about...</p>
+                <button onclick="addToCart('IKIGAI', 649)">Buy for ₹649</button>
+                <small>Book 1</small>
+                
+            </div>
+            
+            <div class="book">
+                <img src="https://rukminim2.flixcart.com/image/1100/1300/l3929ow0/regionalbooks/b/a/f/shreemad-bhagwat-geeta-original-imageeufsk4ds57y.jpeg?q=20&crop=false" alt="Book 2">
+                <h3>SHRIMAD BHAGHWAD GEETA </h3>
+                <p>Author:Maharishi Veda Vyasa</p>
+                <p class="description">A fascinating journey through...</p>
+                <button onclick="addToCart('SHRIMAD BAGHWAD GEETA', 499)">Buy for ₹499</button>
+                <small>Book 2</small>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/91dDv9WOcFL._AC_UF1000,1000_QL80_.jpg" alt="Book 3">
+                <h3>SHERLOCK HOMES</h3>
+                <p>Author: Arthur Conan Doyle</p>
+                <p class="description">A fanatsting love story of.....</p>
+                <button onclick="addToCart('SHERLOCK HOMES', 599)">Buy for ₹599</button>
+                <small>Book 3</small>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81-ibiJm95L._UF1000,1000_QL80_.jpg" alt="Book 4">
+                <h3>GRAY'S ANATOMY</h3>
+                <p>Author: Henry Gray</p>
+                <p class="description">A fascinating journey through...</p>
+                <button onclick="addToCart('GRAYS ANATOMY', 549)">Buy for ₹549</button>
+                <small>Book 4</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/71UVRzmP95L.jpg" alt="Book 5">
+                    <h3>KARMA AND YOU </h3>
+                    <p>Author: </p>
+                    <p class="description">Spiritual Elaboration Of Happiness And Sadness </p>
+                    <button onclick="addToCart('KARMA NAD YOU', 699)">Buy for ₹699</button>
+                    <small>Book 5</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/712imknpmmL.jpg" alt="Book 6">
+                    <h3>WHISPER IN THE HEART</h3>
+                    <p>Author: Ram Dass,Maharajii</p>
+                    <p class="description">It Has BeenMidwifing Spiritually....</p>
+                    <button onclick="addToCart('WHSIPER IN THE HEART', 899)">Buy for ₹899</button>
+                    <small>Book 6</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81BE7eeKzAL.jpg" alt="Book 7">
+                    <h3>RICH DAD POOR DAD</h3>
+                    <p>Author: </p>Robery Kiyoski
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('RICH DAD AND POOR DAD', 999)">Buy for ₹999</button>
+                    <small>Book 7</small>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" alt="Book 8">
+                    <h3>WINGS OS FIRE</h3>
+                    <p>Author: </p>
+                    <p class="description">Bestseller In The India</p>
+                    <button onclick="addToCart('WINGS OF FIRE', 899)">Buy for ₹899</button>
+                    <small>Book 8</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/61sqeWzK08L.jpg" alt="Book 8">
+
+                    <h3>EVERYDAY GITA</h3>
+                    <p>Author: </p>Sunita Pant Bansal
+                    <p class="description">Philosophical Book</p>
+                    <button onclick="addToCart(' EVERYDAY GITA', 1299)">Buy for ₹1299</button>
+                    <small>Book 9</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81fNlN5ECWL._AC_UF1000,1000_QL80_.jpg" alt="Book 9">
+                    <h3>THE REAL YOU </h3>
+                    <p>Author: </p>RADHA SWAMI
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('THE REAL YOU', 499)">Buy for ₹499</button>
+                    <small>Book 10</small>
+                </div>
+                <div class="book">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRROZ0MPMAMk3TlpE52uiahStKd7xrTr2Vi-g&s" alt="Book 10">
+                    <h3>I AM THAT</h3>
+                    <p>Author: </p>Nisargadatta Maharaj
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('I AM THAT', 1499)">Buy for ₹1499</button>
+                    <small>Book 11</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/41h0Bgz-NhL._UF1000,1000_QL80_.jpg" alt="Book 11">
+                    <h3>THE ESEENCE OF SPIRITUAL LIFE BY SWAMI RAMA</h3>
+                    <p>Author:</p>RAMA SWAMI
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('THE ESEENCE OF SPIRITUAL LIFE BY SWAMI RAMA', 999)">Buy for ₹999</button>
+                    <small>Book 12</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/919tUWTTZ6L._UF1000,1000_QL80_.jpg" alt="Book 12">
+                    <h3>THE SEVEN SPIRITUAL LAWS OF SUCCESS</h3>
+                    <p>Author: </p>Deepak Chopra
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('THE SEVEN SPIRITUAL OF SUCCESS ', 1199)">Buy for ₹1199</button>
+                    <small>Book 13</small>
+                </div>
+                <div class="book">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg" alt="Book 13">
+                    <h3>TO KILL A MOCKINBIRD</h3>
+                    <p>Author: </p>HARPER LEE
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart(' TO KILL A MOCKINBIRD', 999)">Buy for ₹999</button>
+                    <small>Book 14</small>
+                </div>
+                <div class="book">
+                    <img src="https://i1.wp.com/www.denverpost.com/wp-content/uploads/2016/07/cursed-child.jpg?w=620&crop=0%2C0px%2C100%2C9999px" alt="Book 14">
+                    <h3>HARRY POTTER </h3>
+                    <p>Author: </p>J.K ROWLING
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('HARRY POTTRER', 899)">Buy for ₹899</button>
+                    <small>Book 15</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/61kIoBofsoL.jpg" alt="Book 15">
+                    <h3>THE UNIVERSE ALWAYS HAS A PLAN</h3>
+                    <p>Author: </p>MATT KAHN
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('THE UNIVERSE ALWAYS HAS A PLAN', 799)">Buy for ₹799</button>
+                    <small>Book 16</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/61-gQgS57OL._AC_UF1000,1000_QL80_.jpg" alt="Book 16">
+                    <h3>YOU BEACAME WHAT YOU THINK</h3>
+                    <p>Author: </p>SHUBHAM KUMAR SINGH
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('YOU BEACAME WHAT YOU THIN', 999)">Buy for ₹999</button>
+                    <small>Book 17</small>
+                </div>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg" alt="Book 17">
+                    <h3>ALCHEMIST</h3>
+                    <p>Author: </p>Paulo Coelho
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('ALCHEMIST', 999)">Buy for ₹999</button>
+                    <small>Book 18</small>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg" alt="Book 18">
+                    <h3>THE SUBTLE ART OF NOT GIVING A FUCK </h3>
+                    <p>Author: </p>MArk Manson
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('THE SUBTLE ART OF NOT GIVING A FUCK ', 1199)">Buy for ₹1199</button>
+                    <small>Book 19</small>
+                </div>
+
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81Dky+tD+pL.jpg" alt="Book 19">
+                    <h3>PHYSICHOLOGY OF MONEY</h3>
+                    <p>Author: </p>Morgan Housel
+                    <p class="description">Bestseller From The WOrld</p>
+                    <button onclick="addToCart('PHYSICHOLOGY OF MONEY', 899)">Buy for ₹899</button>
+                    <small>Book 20</small>
+                </div>
+            
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81F90H7hnML.jpg" alt="Book 20">
+                <h3>ATMOIC HABITS</h3>
+                <p>Author: </p> JAMES CLEAR
+                <p class="description">Bestseller From The WOrld</p>
+                <button onclick="addToCart('ATOMIC HABITS ', 899)">Buy for ₹899</button>
+                <small>Book 21</small>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81FummIc2eL.jpg" alt="Book 21">
+                <h3>It Start with us</h3>
+                <p>Author: </p>  COLEEN HOOVER
+                <p class="description">Bestseller From The WOrld</p>
+                <button onclick="addToCart('It Start with us', 799)">Buy for 799</button>
+                <small>Book 22</small>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/91CqNElQaKL.jpg" alt="Book 22">
+                <h3>It Ends With us</h3>
+                <p>Author: </p> COLEEN HOOVER
+                <p class="description">Bestseller From The WOrld</p>
+                <button onclick="addToCart('It Ends With us', 599)">Buy for ₹599</button>
+                <small>Book 23</small>
+
+            </div>
+            <div class="book">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Zero_to_One.jpg/220px-Zero_to_One.jpg" alt="Book 23">
+                <h3>ZERO ONE</h3>
+                <p>Author: </p> PETER THEIL
+                <p class="description">Bestseller From The WOrld</p>
+                <button onclick="addToCart('ZERO ONE ', 899)">Buy for ₹899</button>
+                <small>Book 24</small>
+            </div>
+            <div class="book">
+                <img src="https://rukminim3.flixcart.com/image/850/1000/jb890nk0/regionalbooks/p/y/n/balasaheb-thakare-yashogatha-original-imafyhp8jyxzsuzb.jpeg?q=90&crop=false" alt="Book 24">
+                <h3>BALASAHEB THACKERAY YASHOGATHA</h3>
+                <p>Author: </p> BALASAHEB THACKERAY
+                <p class="description">Bestseller From The WOrld</p>
+                <button onclick="addToCart('BALASAHEB THACKERAY YASHOGATHA ', 899)">Buy for ₹999</button>
+                <small>Book 25</small>
+            </div>
+
+        
+                
+
+
+            
+            
+        </div>
+    </section>
+    
+    <section id="reviews">
+        <h2>Book Reviews</h2>
+        <div class="review-list">
+            <p><strong>Deepak Sukhia:</strong> "Amazing book, highly recommend!"</p>
+            <p><strong>Sonal Pingalkar:</strong> "Well written and insightful."</p>
+            <p><strong>Gunjan Patel:</strong> "Khup chan aahe Ekda Vachun Tar bagha"</p>
+            <p><strong>Jayesh Karve:</strong> "Amazing Biography Of Doctor Kalam!"</p>
+            <!-- Add more reviews as needed -->
+        </div>
+    </section>
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="total-price">0.00</span></p>
+    </section>
+    
+    
+    <script>
+        let cart = [];
+        function addToCart(book, price) {
+            cart.push({ book, price });
+            updateCart();
+        }
+        function updateCart() {
+            const cartList = document.getElementById("cart-items");
+            const totalPrice = document.getElementById("total-price");
+            cartList.innerHTML = "";
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.book} - ₹${item.price.toFixed(2)}`;
+                cartList.appendChild(li);
+                total += item.price;
+            });
+            totalPrice.textContent = total.toFixed(2);
+        }
+        
+    </script>
+    
+ <div>
+  <div class="buy">  <a href="buy.html" target="blank"> <img src="https://media.istockphoto.com/id/1400586811/vector/web.jpg?s=612x612&w=0&k=20&c=r5g0JlssvfuZN_fPTSwD4eoqSxXVxNX21w0Xs0NsWNo=" alt ="View cart" width="100"> </a> </div>
+     <div class="view"> <p style="color:rgb(231, 103, 17);"><h2>View Your Cart</h2></p> </div> 
+   
+    <!--<im src="https://media.istockphoto.com/id/1400586811/vector/web.jpg?s=612x612&w=0&k=20&c=r5g0JlssvfuZN_fPTSwD4eoqSxXVxNX21w0Xs0NsWNo="
+    <p Style="color: #c4f809;"><h3><b><i>Visit To Your Cart</i></b></h3>
+         <p style="color:Blue;">View  Cart </p>
+    -->
+ </div>
+
+    
+
+</body>
+</html>
+<!--https://media.istockphoto.com/id/1218656325/photo/laptop-with-online-library-realistic-3d-rendering.jpg?s=612x612&w=0&k=20&c=R9yd2DvnzDfmJvPEbpTznc89XwX7SD3k8kAeUU3UnMU=-->

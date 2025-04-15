@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store Booking Form</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://media.istockphoto.com/id/929023224/vector/seamless-background-with-books.jpg?s=612x612&w=0&k=20&c=suJcI7JPdWMAB32Dlr3V1CPs3FCfgFkhSSuFuQN8bzw=') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #e8daef;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #311b92;
+      margin-bottom: 20px;
+    }
+
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .booking-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #283593;
+    }
+
+    .booking-form select,
+    .booking-form input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #7d3c98;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+
+    .booking-form input[type="date"] {
+      cursor: pointer;
+    }
+
+    .booking-form input[type="text"],
+    .booking-form input[type="email"],
+    .booking-form input[type="tel"],
+    .booking-form input[type="number"] {
+      width: 100%;
+    }
+
+    .submit-btn {
+      background-color: #154360;
+      color: rgb(247, 11, 11);
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background- 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0d2c45;
+    }
+
+    /* Popup Message Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .reset-btn {
+
+      background-color: #80cbc4;
+      color: rgb(249, 12, 12);
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background- 0.3s ease;
+    }
+
+    .popup h2 {
+      color: #2e7d32;
+    }
+
+    .popup button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #f0f2f4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background- 0.3s ease;
+    }
+
+    .popup button:hover {
+      background-color: #e5e8eb;
+    }
+
+    /* Popup Fade-in and Fade-out Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+      to {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Store Booking Form</h1>
+    <form id="bookingForm" class="booking-form">
+      <label for="book-title">Select Book:</label>
+      <select id="book-title" name="book-title" required>
+        <option value="">Select a Book</option>
+        <option value="book1">IKIGAI</option>
+        <option value="book2">SHRIMAD BHAGHWAD GEETA</option>
+        <option value="book3">SHERLOCK HOMES</option>
+        <option value="book4">GRAY'S ANATOMY</option>
+        <option value="book4">KARMA AND YOU</option>
+        <option value="book4">WHISPER IN THE HEAR</option>
+        <option value="book4">RICH DAD POOR DAD</option>
+        <option value="book4">WINGS OS FIRE</option>
+        <option value="book4">EVERYDAY GITA</option>
+        <option value="book4">THE REAL YOU</option>
+        <option value="book4">I AM THAT</option>
+        <option value="book4">THE ESEENCE OF SPIRITUAL LIFE BY SWAMI RAMA</option>
+        <option value="book4">THE SEVEN SPIRITUAL LAWS OF SUCCESS</option>
+        <option value="book4">TO KILL A MOCKINBIRD</option>
+        <option value="book4">HARRY POTTER</option>
+        <option value="book4">THE UNIVERSE ALWAYS HAS A PLAN</option>
+        <option value="book4">YOU BEACAME WHAT YOU THINK</option>
+        <option value="book4">ALCHEMIST</option>
+        <option value="book4">THE SUBTLE ART OF NOT GIVING A FUCK</option>
+        <option value="book4">PHYSICHOLOGY OF MONEY</option>
+        <option value="book4">ATMOIC HABITS</option>
+        <option value="book4">It Start with us</option>
+        <option value="book4">It Ends With u</option>
+        <option value="book4">Zero One</option>
+        <option value="book4">BALASAHEB THACKERAY YASHOGATHA</option>
+        
+
+      </select>
+
+      <label for="booking-date">Choose a Date:</label>
+      <input type="date" id="booking-date" name="booking-date" required>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+      <label for="phone">Your Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+      <label for="address">Your Address:</label>
+      <input type="text" id="address" name="address" placeholder="Your address or location" required>
+
+      <label for="pin-code">Pin Code:</label>
+      <input type="number" id="pin-code" name="pin-code" placeholder="Your pin code" required pattern="\d{6}" title="Pin code should be a 6-digit number">
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <button type="reset"class="reset-btn">Reset </button>
+    </form>
+  </div>
+
+  <!-- Popup Message -->
+  <div id="popupMessage" class="popup">
+    <h2>Booking Successful!</h2>
+    <p>Your book has been reserved. We will contact you soon.</p>
+    <button onclick="closePopup()"><a href="index.html">OK</a></button>
+  </div>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent actual form submission
+
+      // Show popup
+      let popup = document.getElementById("popupMessage");
+      popup.style.display = "block";
+
+      // Close popup automatically after 3 seconds
+      setTimeout(() => {
+        closePopup();
+      }, 3000);
+    });
+
+    function closePopup() {
+      let popup = document.getElementById("popupMessage");
+      popup.style.animation = "fadeOut 0.5s ease-in-out";
+      
+      setTimeout(() => {
+        popup.style.display = "none";
+        popup.style.animation = ""; // Reset animation
+        document.getElementById("bookingForm").reset(); // Clear form after closing
+      }, 500);
+    }
+  </script>
+</body>
+</html>
